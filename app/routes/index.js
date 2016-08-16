@@ -13,6 +13,7 @@ export default Ember.Route.extend({
     },
 
     destroyArticle(article) {
+      console.log(article);
       article.destroyRecord();
       this.transitionTo('index');
     }
