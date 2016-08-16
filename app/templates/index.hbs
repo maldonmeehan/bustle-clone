@@ -2,6 +2,6 @@
 
   <ul>
   {{#each model as |article|}}
-  <li>{{article.author}} {{article.title}} {{article.category}}</li>
+    {{article-tile article=article}}
   {{/each}}
 </ul>
