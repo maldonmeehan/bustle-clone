@@ -1,3 +1,8 @@
 <li>
   {{article.author}} {{article.title}} {{article.category}}
+  {{#if isImageShowing}}
+    <p><img src={{article.image}} alt={{article.type}} {{action 'imageHide'}}></p>
+    {{else}}
+      <button {{action 'imageShow'}}>Show image</button>
+    {{/if}}
 </li>
