@@ -1,10 +1,10 @@
-<h1> Bustle </h1>
 
-<ul>
-  {{#each model as |article|}}
+    {{#each model as |article|}}
+    <div class="container">
      {{article-tile article=article}}
+     </div>
   {{/each}}
-</ul>
+
 
 {{new-article save2="save3"}}
 

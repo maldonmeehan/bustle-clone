@@ -1,10 +1,7 @@
 <div class="container">
-  <li>
-    {{#link-to 'article' article.id}}{{article.author}}'s {{article.title}} in {{article.category}} {{/link-to}}
-    {{#if isImageShowing }}
-      <p><img src={{article.image}} alt={{article.type}} {{action 'imageHide'}} ></p>
-    {{else}}
-      <button {{action 'imageShow'}} >Show image</button>
-    {{/if}}
-  </li>
+    {{#link-to 'article' article.id}}  <img src={{article.image}} alt={{article.type}}>
+    <h5>{{article.title}}</h5>
+    {{/link-to}}
+    <h5>{{article.author}}</h5>
+    <h5>{{article.category}}</h5>
 </div>
