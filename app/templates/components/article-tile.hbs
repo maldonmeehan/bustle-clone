@@ -1,9 +1,10 @@
-<li>
-  {{article.author}} {{article.title}} {{article.category}}
-  {{#if isImageShowing}}
-    <p><img src={{article.image}} alt={{article.type}} {{action 'imageHide'}}></p>
+<div class="container">
+  <li>
+    {{#link-to 'article' article.id}}{{article.author}}'s {{article.title}} in {{article.category}} {{/link-to}}
+    {{#if isImageShowing }}
+      <p><img src={{article.image}} alt={{article.type}} {{action 'imageHide'}} ></p>
     {{else}}
-      <button {{action 'imageShow'}}>Show image</button>
+      <button {{action 'imageShow'}} >Show image</button>
     {{/if}}
-    <button {{action 'delete' article}}>Delete</button>
-</li>
+  </li>
+</div>

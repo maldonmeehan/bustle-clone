@@ -1,9 +1,12 @@
-<h1>Bustle</h1>
+<h1> Bustle </h1>
 
 <ul>
   {{#each model as |article|}}
-    {{article-tile article=article destroyArticle="destroyArticle"}}
+     {{article-tile article=article}}
   {{/each}}
 </ul>
 
 {{new-article save2="save3"}}
+
+{{#link-to 'about'}}About{{/link-to}}
+{{#link-to 'contact'}}Click here to contact us.{{/link-to}}
